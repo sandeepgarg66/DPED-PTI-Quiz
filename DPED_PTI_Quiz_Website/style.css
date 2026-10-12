@@ -1,0 +1,25 @@
+:root{--blue:#173b63;--light:#f3f6fa;--green:#16803c;--red:#c62828}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:"Noto Sans Devanagari","Mangal","Nirmala UI",Arial,sans-serif;background:var(--light);color:#182230;line-height:1.55;overflow-wrap:anywhere}
+header{background:var(--blue);color:white;padding:22px 14px;text-align:center}
+header h1{margin:0 0 7px;font-size:clamp(22px,5.5vw,32px);line-height:1.35}
+header p{margin:0;font-size:clamp(15px,4vw,20px)}
+.wrap{width:100%;max-width:900px;margin:0 auto;padding:14px 12px 32px}
+.toolbar{background:#fff;padding:12px;border:1px solid #dce3ec;border-radius:12px;box-shadow:0 3px 12px #172b4d12;display:flex;gap:10px;align-items:center;justify-content:space-between;flex-wrap:wrap;margin-bottom:16px}
+#score{font-weight:700}
+button{font:inherit;touch-action:manipulation;-webkit-tap-highlight-color:transparent}
+.reset{background:#e8eef5;color:#173b63;font-weight:700;border:0;border-radius:8px;padding:10px 12px;cursor:pointer}
+.question{background:#fff;border:1px solid #dce3ec;border-radius:12px;padding:15px;margin:12px 0;box-shadow:0 2px 8px #172b4d08;display:block}
+.question h2{font-size:16px;line-height:1.65;margin:0 0 12px;overflow-wrap:anywhere}
+.options{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:8px}
+.option{display:flex;align-items:flex-start;gap:8px;text-align:left;width:100%;min-width:0;background:#f7f9fc;border:1px solid #dce3ec;padding:11px;border-radius:9px;color:#182230;white-space:normal;overflow-wrap:anywhere;cursor:pointer;line-height:1.5}
+.option .letter{font-weight:700;min-width:25px}
+.option.correct{background:#e8f7ed;border-color:var(--green);color:#11632e}
+.option.wrong{background:#fdecec;border-color:var(--red);color:#a51d1d}
+.option:disabled{cursor:default;opacity:1}
+.mark{font-weight:800;margin-left:auto;padding-left:4px}
+.feedback{margin-top:9px;font-weight:700;min-height:0;font-size:14px}
+.feedback.good{color:var(--green)}.feedback.bad{color:var(--red)}
+footer{text-align:center;color:#5d6877;font-size:13px;padding:18px 4px}
+@media(max-width:600px){.wrap{padding:12px 10px calc(28px + env(safe-area-inset-bottom))}.toolbar{position:sticky;top:0;z-index:5;align-items:center;gap:8px;padding:10px;background:#fff}.toolbar>div{max-width:100%}#score,#result{font-size:14px}.reset{padding:10px;font-size:14px}.options{grid-template-columns:minmax(0,1fr)}.question{padding:13px;margin:10px 0}.question h2{font-size:16px}.option{font-size:15px;min-height:44px;padding:12px}.feedback{font-size:14px}}
